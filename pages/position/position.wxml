@@ -4,31 +4,14 @@
             <input
                     wx:if="{{item.tag==='input'}}"
                     name="{{item.name}}"
-                    data-name="{{item.name}}"
-                    bindinput="onChange"
                     placeholder="{{item.placeholder}}"
             />
             <textarea
                     wx:if="{{item.tag==='textarea'}}"
                     name="{{item.name}}"
-                    data-name="{{item.name}}"
                     placeholder="{{item.placeholder}}"
-                    bindinput="onChange"
                     auto-height="true"
             />
-            <picker
-                    wx:if="{{item.tag==='select'}}"
-                    value="{{values[item.name]}}"
-                    name="{{item.name}}"
-                    data-name="{{item.name}}"
-                    range="{{item.options}}"
-                    range-key="label"
-                    bindchange="onChange"
-            >
-                <view class="picker">
-                    {{values[item.name] ? item.options[values[item.name]].label : item.placeholder}}
-                </view>
-            </picker>
         </view>
     </view>
     <button form-type="submit" class="btn--primary">提交</button>
