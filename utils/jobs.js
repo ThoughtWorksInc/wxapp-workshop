@@ -39,7 +39,13 @@ export const getJobs = () => {
   });
 };
 
-
+export const updateJob = (id) => {
+  return readJobs().then(jobs => {
+    console.log(jobs)
+    console.log(id)
+    return jobs[id];
+  });
+};
 
 
 

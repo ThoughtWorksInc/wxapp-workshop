@@ -4,11 +4,13 @@
             <input
                     wx:if="{{item.tag==='input'}}"
                     name="{{item.name}}"
+                    value="{{values[item.name]}}"
                     placeholder="{{item.placeholder}}"
             />
             <textarea
                     wx:if="{{item.tag==='textarea'}}"
                     name="{{item.name}}"
+                    value="{{values[item.name]}}"
                     placeholder="{{item.placeholder}}"
                     auto-height="true"
             />

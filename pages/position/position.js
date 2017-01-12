@@ -1,4 +1,4 @@
-import { createJob } from '../../utils/jobs';
+import { createJob, updateJob } from '../../utils/jobs';
 
 const fields = [
   {
@@ -25,11 +25,29 @@ const fields = [
 
 Page({
   data: {
-    fields
+    fields,
+    values: {},
   },
+
+  onLoad(query){
+    const id = query.id;
+    if (id) {
+      updateJob(id).then((job) => {
+        this.setData({
+          values: job,
+        });
+      });
+    }
+  },
+
+  transitionToList(){
+    wx.navigateBack();
+  },
+
   onSubmit(e){
     const values = e.detail.value;
     console.log(values);
     createJob(values);
+    this.transitionToList()
   }
 });

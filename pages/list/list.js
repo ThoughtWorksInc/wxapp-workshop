@@ -13,6 +13,12 @@ Page({
     });
   },
 
+  transitionToUpdate(e){
+    wx.navigateTo({
+      url: `../position/position?id=${e.target.dataset.id}`,
+    });
+  },
+
   transitionToPosition(){
     wx.navigateTo({
       url: '../position/position'
