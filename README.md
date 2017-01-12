@@ -13,7 +13,11 @@
     - `wxml` tags
     - `wxss`
 
-3. clarify requirements (10 mins)
+3. clarify [requirements](https://github.com/ThoughtWorksInc/wxapp-workshop/issues) (10 mins)
+    - #3 profile
+    - #1 position
+    - #2 job & apply
+    - #4 explore
 
 4. add other two pages
     - Page api & config
