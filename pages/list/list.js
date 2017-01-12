@@ -1,4 +1,4 @@
-import { getJobs } from '../../utils/jobs';
+import { getJobs, deleteJob } from '../../utils/jobs';
 
 Page({
   data: {
@@ -22,6 +22,15 @@ Page({
   transitionToPosition(){
     wx.navigateTo({
       url: '../position/position'
+    });
+  },
+
+  deleteJobs(e){
+    const id = e.target.dataset.id;
+    deleteJob(id).then(jobList => {
+      this.setData({
+        jobList
+      });
     });
   }
 });

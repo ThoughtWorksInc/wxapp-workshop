@@ -8,6 +8,7 @@
         </view>
         <view class="right">
             <button size="mini" bindtap="transitionToUpdate" data-id="{{item.id}}">编辑</button>
+            <button size="mini" data-id="{{item.id}}" bindtap="deleteJobs">删除</button>
         </view>
     </view>
     <button class="btn" bindtap="transitionToPosition">创建内推职位</button>
