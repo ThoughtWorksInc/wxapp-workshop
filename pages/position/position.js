@@ -1,3 +1,5 @@
+import { createJob } from '../../utils/jobs';
+
 const fields = [
   {
     name: 'jobName',
@@ -23,11 +25,11 @@ const fields = [
 
 Page({
   data: {
-    values: {},
     fields
   },
   onSubmit(e){
     const values = e.detail.value;
     console.log(values);
+    createJob(values);
   }
 });

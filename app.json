@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/list/list",
     "pages/position/position",
     "pages/explore/explore",
     "pages/apply/apply",
@@ -21,7 +22,7 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/position/position",
+        "pagePath": "pages/list/list",
         "text": "职位",
         "iconPath": "icons/home.png",
         "selectedIconPath": "icons/home_green.png"
