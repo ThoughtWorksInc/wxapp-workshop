@@ -1,12 +1,54 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/position/position",
+    "pages/explore/explore",
+    "pages/apply/apply",
+    "pages/profile/profile"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+  "window": {
+    "navigationBarBackgroundColor": "#2DBE60",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "骚窝 · 内推",
+    "backgroundColor": "#f6f8f9",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "gray",
+    "selectedColor": "#2DBE60",
+    "backgroundColor": "#f6f8f9",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/position/position",
+        "text": "职位",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home_green.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "发现",
+        "iconPath": "icons/compass.png",
+        "selectedIconPath": "icons/compass_green.png"
+      },
+      {
+        "pagePath": "pages/apply/apply",
+        "text": "申请",
+        "iconPath": "icons/heart.png",
+        "selectedIconPath": "icons/heart_green.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我",
+        "iconPath": "icons/person.png",
+        "selectedIconPath": "icons/person_green.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }
