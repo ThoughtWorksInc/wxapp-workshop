@@ -6,7 +6,7 @@
 
 1. doc overview (10 mins)
 
-2. offical demo (profile page) and theory (15 mins)
+2. offical demo (profile page) and theory (20 mins)
     - [data binding](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/data.html?t=201715) & [initial data](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html?t=201715) (vs Angular)
     - [lifecycle](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html?t=201715) eg: `onLaunch` (vs React)
     - `wx.login`
@@ -20,7 +20,7 @@
     - [#2](https://github.com/ThoughtWorksInc/wxapp-workshop/issues/2) job & apply
     - [#4](https://github.com/ThoughtWorksInc/wxapp-workshop/issues/4) explore
 
-4. add other two pages
+4. add other two pages (10 mins)
     - Page api & config
     - Page navigator
         - `wx.navigateTo`
