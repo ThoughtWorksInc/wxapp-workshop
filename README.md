@@ -1,23 +1,29 @@
 # WeChat App Workshop
 
-0. setup env & add developer account (10 mins) | 
-    - [ ] reminder in jinshuju | 
-    - [ ] collect exsiting accounts
+0. setup env & add developer account (10 mins)
+    - [x] reminder in jinshuju/invitation mail 
+    - [ ] collect exsiting accounts @Xing
 
 1. doc overview (10 mins)
 
 2. offical demo (profile page) and theory (15 mins)
     - lifecycle
-    - wx.login
-    - wx.getUserInfo
-    - wxml tags
-    - wxss
+    - `wx.login`
+    - `wx.getUserInfo`
+    - `wxml` tags
+    - `wxss`
 
-3. requirements clarify + eating (15 mins)
+3. clarify requirements (10 mins)
+
+4. add other two pages
+    - Page api & config
+    - Page `navigator`
+
+eating 
 
 ----- 10 mins ------
 
-4. add and modify other two pages deps on requirements 
+5. modify special pages deps on requirements 
     1. profile (wx.login wx.getUserInfo page-api)
     2. user info input (form, button compoent)
     3. xxx 
