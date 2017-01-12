@@ -5,7 +5,7 @@ Total Time: 2 hours
 Branchs: 
 
 - [`master`](https://github.com/ThoughtWorksInc/wxapp-workshop/tree/master): only README to record scripts
-- `start`: from offical-demo, add necessary icons
+- [`quickstart`](https://github.com/ThoughtWorksInc/wxapp-workshop/tree/quickstart): from offical-demo, add necessary icons
 - `pages`: added all pages and config tab icons
 - `position`: second page
 - ......
@@ -28,7 +28,7 @@ Branchs:
         + [`wxml`](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/?t=201715) tags
         + [`wxss`](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxss.html?t=201715) rpx（responsive pixel）
 
-3. clarify [requirements](https://github.com/ThoughtWorksInc/wxapp-workshop/issues) (10 mins)
+3. clarify [requirements](https://github.com/ThoughtWorksInc/wxapp-workshop/issues) @Xing (10 mins)
     - [#3](https://github.com/ThoughtWorksInc/wxapp-workshop/issues/3) profile
     - [#1](https://github.com/ThoughtWorksInc/wxapp-workshop/issues/1) position
     - [#2](https://github.com/ThoughtWorksInc/wxapp-workshop/issues/2) job & apply
