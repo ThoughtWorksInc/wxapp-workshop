@@ -1,4 +1,4 @@
-import { createJob, updateJob } from '../../utils/jobs';
+import { createJob, getJobById, updateJob } from '../../utils/jobs';
 
 const fields = [
   {
@@ -32,9 +32,10 @@ Page({
   onLoad(query){
     const id = query.id;
     if (id) {
-      updateJob(id).then((job) => {
+      getJobById(id).then((job) => {
         this.setData({
           values: job,
+          id
         });
       });
     }
@@ -46,8 +47,15 @@ Page({
 
   onSubmit(e){
     const values = e.detail.value;
-    console.log(values);
+    const id = this.data.id;
+    const newJob = Object.assign({}, values, { id });
+    if (id) {
+      updateJob(newJob).then(() => {
+        this.transitionToList();
+      });
+      return;
+    }
     createJob(values);
-    this.transitionToList()
+    this.transitionToList();
   }
 });

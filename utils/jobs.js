@@ -16,7 +16,9 @@ const readJobs = () => {
       success: (storage) => {
         return resolve(JSON.parse(storage.data || '{}'));
       },
-      fail: reject
+      fail: () => {
+        return resolve({});
+      }
     });
   });
 };
@@ -39,14 +41,18 @@ export const getJobs = () => {
   });
 };
 
-export const updateJob = (id) => {
+export const getJobById = (id) => {
   return readJobs().then(jobs => {
-    console.log(jobs)
-    console.log(id)
     return jobs[id];
   });
 };
 
+export const updateJob = (newJob) => {
+  return readJobs().then(jobs => {
+    const newJobs = Object.assign({}, jobs, { [newJob.id]: newJob });
+    return writeJobs(newJobs);
+  });
+};
 
 
 
