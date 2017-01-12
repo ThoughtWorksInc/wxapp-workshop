@@ -1,6 +1,6 @@
 # WeChat App Workshop
 
-Times: Total 2 hours 
+Total Time: 2 hours 
 
 Branchs: 
 
@@ -16,7 +16,7 @@ Branchs:
     - [x] reminder in jinshuju/invitation mail 
     - [ ] collect exsiting accounts @Xing
 
-1. doc overview (10 mins)
+1. doc overview: 框架、API、组件 (10 mins)
 
 2. offical demo (profile page) and theory (20 mins)
     - [data binding](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/data.html?t=201715) & [initial data](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html?t=201715) (vs Angular)
@@ -34,7 +34,7 @@ Branchs:
     - [#2](https://github.com/ThoughtWorksInc/wxapp-workshop/issues/2) job & apply
     - [#4](https://github.com/ThoughtWorksInc/wxapp-workshop/issues/4) explore
 
-4. add other two pages (10 mins)
+4. initial another three pages (10 mins)
     - Page api & [config](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html?t=201715)
     - Page navigator
         - [`wx.navigateTo`](https://mp.weixin.qq.com/debug/wxadoc/dev/api/ui-navigate.html?t=201716)
