@@ -1,0 +1,17 @@
+.btn {
+  margin: 10 rpx;
+}
+
+.job {
+  padding:20rpx;
+  display: flex;
+  margin:10rpx;
+  background:#f8f8f8;
+}
+
+.left{
+  flex:8;
+}
+.right{
+  flex:2;
+}
