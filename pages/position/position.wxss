@@ -1,7 +1,7 @@
 .section {
   border-bottom: 1rpx solid #ccc;
-  padding: 20rpx;
-  margin: 40rpx 80rpx 40rpx 80rpx;
+  padding: 10rpx;
+  margin: 60rpx 80rpx 40rpx 80rpx;
 }
 
 .submit-btn {
