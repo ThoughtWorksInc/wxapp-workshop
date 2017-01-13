@@ -6,11 +6,19 @@
   padding:20rpx;
   display: flex;
   margin:10rpx;
-  background:#f8f8f8;
+  background:#e8e8e8;
+  opacity: .9;
+  border-radius: 5px;
 }
-
 .left{
   flex:8;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.left > view {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 .right{
   flex:2;
