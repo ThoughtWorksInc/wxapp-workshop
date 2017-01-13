@@ -1,13 +1,8 @@
-import { getJobs, deleteJob } from '../../utils/jobs';
 let app = getApp();
 
 Page({
-  data: {
-    jobList: []
-  },
-
   onLoad() {
-    app.positionsRef.bindAsArray(this,'positions');
+    app.positionsRef.bindAsArray(this, 'positions');
   },
 
   transitionToUpdate(e){
@@ -24,10 +19,8 @@ Page({
 
   deleteJobs(e){
     const id = e.target.dataset.id;
-    deleteJob(id).then(jobList => {
-      this.setData({
-        jobList
-      });
-    });
+    app.positionsRef.child(id).remove().then(()=> {
+    }).catch(()=> {
+    })
   }
 });
