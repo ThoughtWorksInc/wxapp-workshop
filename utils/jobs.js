@@ -9,20 +9,6 @@ const writeJobs = (jobs) => {
   })
 };
 
-const readJobs = () => {
-  return new Promise((resolve, reject) => {
-    wx.getStorage({
-      key: 'jobs',
-      success: (storage) => {
-        return resolve(JSON.parse(storage.data || '{}'));
-      },
-      fail: () => {
-        return resolve({});
-      }
-    });
-  });
-};
-
 export const createJob = (job) => {
   return readJobs().then(jobs => {
     const id = new Date().getTime();
@@ -32,12 +18,6 @@ export const createJob = (job) => {
     });
 
     return writeJobs(newJobs);
-  });
-};
-
-export const getJobs = () => {
-  return readJobs().then((jobs) => {
-    return Object.values(jobs);
   });
 };
 

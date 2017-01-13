@@ -10,14 +10,6 @@ Page({
     app.positionsRef.bindAsArray(this,'positions');
   },
 
-  onShow(){
-    getJobs().then(jobList => {
-      this.setData({
-        jobList,
-      });
-    });
-  },
-
   transitionToUpdate(e){
     wx.navigateTo({
       url: `../position/position?id=${e.target.dataset.id}`,

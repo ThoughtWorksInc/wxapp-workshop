@@ -1,21 +1,21 @@
 <form bindsubmit="onSubmit">
     <view class="section">
         <input
-                name="positionName"
+                name="name"
                 value="{{position['.value'].name}}"
                 placeholder="职位名称"
         />
     </view>
     <view class="section">
         <input
-                name="positionName"
+                name="address"
                 value="{{position['.value'].address}}"
                 placeholder="所在位置"
         />
     </view>
     <view class="section">
         <textarea
-                name="positionName"
+                name="description"
                 value="{{position['.value'].description}}"
                 placeholder="职位描述"
                 auto-height="true"
