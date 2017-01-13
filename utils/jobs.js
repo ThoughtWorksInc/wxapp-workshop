@@ -16,7 +16,9 @@ const readJobs = () => {
       success: (storage) => {
         return resolve(JSON.parse(storage.data || '{}'));
       },
-      fail: reject
+      fail: () => {
+        return resolve({});
+      }
     });
   });
 };
