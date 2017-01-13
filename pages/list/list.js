@@ -1,8 +1,13 @@
 import { getJobs, deleteJob } from '../../utils/jobs';
+let app = getApp();
 
 Page({
   data: {
     jobList: []
+  },
+
+  onLoad() {
+    app.todoRef.bindAsArray(this,'positions');
   },
 
   onShow(){
