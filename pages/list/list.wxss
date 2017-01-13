@@ -1,5 +1,8 @@
 .btn {
-  margin: 10 rpx;
+    border: none;
+    background-color: #2DBE60;
+    color: #fff;
+    margin: 40rpx 80rpx 40rpx 80rpx;
 }
 
 .job {
