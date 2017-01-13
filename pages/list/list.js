@@ -7,7 +7,7 @@ Page({
   },
 
   onLoad() {
-    app.todoRef.bindAsArray(this,'positions');
+    app.positionsRef.bindAsArray(this,'positions');
   },
 
   onShow(){

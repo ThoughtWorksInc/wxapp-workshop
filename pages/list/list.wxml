@@ -5,8 +5,8 @@
             <view>{{item[".value"].address}}</view>
         </view>
         <view class="right">
-            <button size="mini" bindtap="transitionToUpdate" data-id="{{item.id}}">编辑</button>
-            <button size="mini" type="warn" data-id="{{item.id}}" bindtap="deleteJobs">删除</button>
+            <button size="mini" bindtap="transitionToUpdate" data-id="{{item['.key']}}">编辑</button>
+            <button size="mini" type="warn" data-id="{{item['.key']}}" bindtap="deleteJobs">删除</button>
         </view>
     </view>
     <button class="btn" bindtap="transitionToPosition">创建内推职位</button>
