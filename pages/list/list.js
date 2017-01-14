@@ -1,6 +1,7 @@
 let app = getApp();
 
 Page({
+  
   onLoad() {
     const role = wx.getStorageSync('role')
     this.setData({

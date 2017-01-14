@@ -18,6 +18,7 @@ App({
     wx.setStorageSync('role', 'HR')
     // wx.setStorageSync('role', 'USER')
   },
+  
   getUserInfo: function (cb) {
     var that = this
     if (this.globalData.userInfo) {

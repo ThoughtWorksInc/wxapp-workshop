@@ -29,7 +29,7 @@ Page({
     })
 
     const id = e.target.dataset.id;
-    app.positionsRef.child(id).remove().then(()=> {
+    app.applicationRef.child(id).remove().then(()=> {
       wx.hideToast()
     }).catch(()=> {
       wx.showToast({
