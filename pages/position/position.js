@@ -26,15 +26,27 @@ Page({
 
   onSubmit(e){
 
+    wx.showToast({
+      title: '提交中...',
+      icon: 'loading',
+      mask: true
+    })
+
     const values = e.detail.value;
     console.log(values);
     const id = this.data.id;
     let updateProm = id ? app.positionsRef.child(id).set(values) : app.positionsRef.push(values);
     updateProm
       .then(() => {
+        wx.hideToast()
         this.transitionToList()
       })
       .catch(() => {
+        wx.showToast({
+          title: '失败',
+          mask: true,
+          duration: 2000
+        })
       });
   }
 });
