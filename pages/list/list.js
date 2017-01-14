@@ -2,6 +2,10 @@ let app = getApp();
 
 Page({
   onLoad() {
+    let role = wx.getStorageSync('role')
+    this.setData({
+      role
+    })
     app.positionsRef.bindAsArray(this, 'positions');
   },
 
