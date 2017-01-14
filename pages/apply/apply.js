@@ -2,25 +2,21 @@
 //获取应用实例
 var app = getApp()
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {}
+  onLoad: function (query) {
+    const id = query.id;
+    if (id) {
+      this.setData({id});
+    }else {
+      wx.navigateBack();
+    }
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../explore/explore'
-    })
-  },
-  onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
+  onSubmit: function(e) {
+    const values = e.detail.value;
+    values.id = this.data.id;
+    app.candidatesRef.push(values).then(() => {
+      wx.navigateBack();
+    }).catch(() => {
+
     })
   }
 })

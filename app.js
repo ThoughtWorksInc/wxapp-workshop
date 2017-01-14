@@ -9,6 +9,7 @@ App({
   onLaunch: function () {
     wilddog.initializeApp(config);
     this.positionsRef = wilddog.sync().ref('tw_positions');
+    this.candidatesRef = wilddog.sync().ref('tw_candidate');
 
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
