@@ -10,3 +10,21 @@
   color: #fff;
   margin: 40rpx 80rpx 40rpx 80rpx;
 }
+
+.detail-box {
+    margin: 80rpx 80rpx auto 80rpx;
+}
+
+.detail-name, .detail-address {
+    display: block;
+    text-align: left;
+    font-size: 50rpx;
+    margin: 10rpx auto;
+}
+.detail-address {
+    font-size: 40rpx;
+}
+.detail-description {
+    text-align: left;
+    font-size: 30rpx;
+}

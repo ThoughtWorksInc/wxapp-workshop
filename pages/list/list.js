@@ -2,7 +2,7 @@ let app = getApp();
 
 Page({
   onLoad() {
-    let role = wx.getStorageSync('role')
+    const role = wx.getStorageSync('role')
     this.setData({
       role
     })

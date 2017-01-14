@@ -7,10 +7,21 @@ Page({
       this.setData({ id: id });
       app.positionsRef.child(`${id}`).bindAsObject(this, 'position');
     }
+
+    const role = wx.getStorageSync('role')
+    this.setData({
+      role
+    })
   },
 
   transitionToList(){
     wx.navigateBack();
+  },
+
+  transitionToApply() {
+    wx.navigateTo({
+      url: `../apply/apply?id=${this.data.id}`
+    })
   },
 
   onSubmit(e){
