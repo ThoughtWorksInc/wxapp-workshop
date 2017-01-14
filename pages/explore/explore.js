@@ -1,16 +1,11 @@
-//logs.js
-// var util = require('../../utils/util.js')
-import { formatTime } from '../../utils/util.js'
-
+//profile.js
+//获取应用实例
+var app = getApp();
 Page({
-  data: {
-    logs: []
-  },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(function (log) {
-        return formatTime(new Date(log))
-      })
-    })
-  }
-})
+    transitionToCandidateList(){
+        wx.navigateTo({
+            url: '../candidate/candidate'
+        });
+    }
+
+});

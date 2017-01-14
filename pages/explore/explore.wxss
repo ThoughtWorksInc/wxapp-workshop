@@ -1,8 +1,7 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
-}
-.log-item {
-  margin: 10rpx;
+/**profile.wxss**/
+.btn {
+  border: none;
+  background-color: #2DBE60;
+  color: #fff;
+  margin: 40rpx 80rpx 40rpx 80rpx;
 }

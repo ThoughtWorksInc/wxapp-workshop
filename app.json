@@ -4,7 +4,9 @@
     "pages/position/position",
     "pages/explore/explore",
     "pages/apply/apply",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/candidate/candidate"
+
   ],
   "window": {
     "navigationBarBackgroundColor": "#2DBE60",

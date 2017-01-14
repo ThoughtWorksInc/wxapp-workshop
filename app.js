@@ -1,8 +1,8 @@
 import wilddog from './utils/wilddog-weapp-all'
 
 const config = {
-  syncURL: 'https://tw-wechat.wilddogio.com',
-  authDomain: 'tw-wechat.wilddog.com'
+  syncURL: 'https://twirapp.wilddogio.com',
+  authDomain: 'twirapp.wilddogio.com'
 };
 
 App({
