@@ -1,21 +1,22 @@
 import wilddog from './utils/wilddog-weapp-all'
 
 const config = {
-  syncURL: 'https://twirapp.wilddogio.com',
-  authDomain: 'twirapp.wilddogio.com'
+  syncURL: 'https://tw-internal-referral.wilddogio.com',
+  authDomain: 'tw-internal-referral.wilddogio.com'
 };
 
 App({
   onLaunch: function () {
     wilddog.initializeApp(config);
     this.positionsRef = wilddog.sync().ref('tw_positions');
-    this.candidatesRef = wilddog.sync().ref('tw_candidate');
+    this.candidatesRef = wilddog.sync().ref('tw_candidates');
+    this.applicationRef = wilddog.sync().ref('tw_applications');
 
-    //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     wx.setStorageSync('role', 'HR')
+    // wx.setStorageSync('role', 'USER')
   },
   getUserInfo: function (cb) {
     var that = this

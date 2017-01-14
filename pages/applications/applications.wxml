@@ -1,0 +1,13 @@
+<view>
+    <view wx:for="{{applications}}" wx:key="{{index}}" class="section">
+        <view class="left">
+            <view>{{item[".value"].name}}</view>
+            <view>{{item[".value"].github}}</view>
+            <view>{{item[".value"].more_detail}}</view>
+        </view>
+        <view class="right">
+            <button size="mini" bindtap="transitionToUpdate" data-id="{{item['.key']}}">{{role === 'HR' ? '编辑' : '详情'}}</button>
+            <button wx:if="{{role === 'HR'}}" size="mini" type="warn" data-id="{{item['.key']}}" bindtap="deleteApplication">删除</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "申请列表",
+  "navigationBarBackgroundColor": "#2DBE60",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#f6f8f9",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

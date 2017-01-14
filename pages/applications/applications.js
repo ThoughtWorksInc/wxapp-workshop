@@ -6,22 +6,22 @@ Page({
     this.setData({
       role
     })
-    app.candidatesRef.bindAsArray(this, 'candidates');
+    app.applicationRef.bindAsArray(this, 'applications');
   },
 
   transitionToUpdate(e){
     wx.navigateTo({
-      url: `../candidate/candidate?id=${e.target.dataset.id}`,
+      url: `../apply/apply?id=${e.target.dataset.id}`,
     });
   },
 
-  transitionToCandidate(){
+  transitionToApplication(){
     wx.navigateTo({
-      url: '../candidate/candidate'
+      url: '../applications/applications'
     });
   },
 
-  deleteJobs(e){
+  deleteApplication(e){
     wx.showToast({
       title: '提交中...',
       icon: 'loading',

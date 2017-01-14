@@ -5,7 +5,8 @@
     "pages/explore/explore",
     "pages/apply/apply",
     "pages/profile/profile",
-    "pages/candidate/candidate"
+    "pages/candidate/candidate",
+    "pages/applications/applications"
 
   ],
   "window": {

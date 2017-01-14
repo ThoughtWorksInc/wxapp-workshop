@@ -48,6 +48,6 @@ Page({
           duration: 2000
         })
       });
-    wx.navigateBack();
+    
   }
 });

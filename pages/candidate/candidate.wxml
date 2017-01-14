@@ -1,6 +1,10 @@
 <!--candidate.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view wx:for="{{candidates}}" wx:key="{{index}}" class="candidate">
+  <view class="left">
+    <view>{{item[".value"].name}}</view>
+  </view>
+  <view class="right">
+    <button size="mini" bindtap="transitionToUpdate" data-id="{{item['.key']}}">{{role === 'HR' ? '编辑' : '详情'}}</button>
+    <button size="mini" type="warn" data-id="{{item['.key']}}" bindtap="deleteJobs">删除</button>
+  </view>
 </view>

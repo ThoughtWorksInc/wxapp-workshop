@@ -2,21 +2,21 @@
     <view class="section">
         <input
                 name="name"
-                value="{{candidate['.value'].name}}"
+                value="{{apply['.value'].name}}"
                 placeholder="姓名"
         />
     </view>
     <view class="section">
         <input
                 name="github"
-                value="{{candidate['.value'].github}}"
+                value="{{apply['.value'].github}}"
                 placeholder="github"
         />
     </view>
     <view class="section">
             <textarea
                     name="more_detail"
-                    value="{{candidate['.value'].more_detail}}"
+                    value="{{apply['.value'].more_detail}}"
                     placeholder="更多描述"
                     auto-height="true"
             />
