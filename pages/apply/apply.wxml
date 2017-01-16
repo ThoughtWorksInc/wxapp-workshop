@@ -14,12 +14,12 @@
         />
     </view>
     <view class="section">
-            <textarea
-                    name="more_detail"
-                    value="{{apply['.value'].more_detail}}"
-                    placeholder="更多描述"
-                    auto-height="true"
-            />
+        <textarea
+                name="more_detail"
+                value="{{apply['.value'].more_detail}}"
+                placeholder="更多描述"
+                auto-height="true"
+        />
     </view>
     <button form-type="submit" class="submit-btn">提交</button>
 </form>

@@ -15,8 +15,8 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    wx.setStorageSync('role', 'HR')
-    // wx.setStorageSync('role', 'USER')
+    // wx.setStorageSync('role', 'HR')
+    wx.setStorageSync('role', 'USER')
   },
   
   getUserInfo: function (cb) {
