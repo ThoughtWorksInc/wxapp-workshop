@@ -29,15 +29,24 @@ Page({
     values: {},
   },
 
+  setNavigationBarTitle(title){
+    wx.setNavigationBarTitle({
+      title,
+    });
+  },
+
   onLoad(query){
     const id = query.id;
     if (id) {
+      this.setNavigationBarTitle('编辑内推职位');
       getJobById(id).then((job) => {
         this.setData({
           values: job,
           id
         });
       });
+    } else {
+      this.setNavigationBarTitle('创建内推职位');
     }
   },
 
