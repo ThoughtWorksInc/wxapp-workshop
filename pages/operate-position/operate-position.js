@@ -41,7 +41,7 @@ Page({
     }
   },
 
-  transitionToList(){
+  transitionToPositionsPge(){
     wx.navigateBack();
   },
 
@@ -51,11 +51,11 @@ Page({
     const newJob = Object.assign({}, values, { id });
     if (id) {
       updateJob(newJob).then(() => {
-        this.transitionToList();
+        this.transitionToPositionsPge();
       });
       return;
     }
     createJob(values);
-    this.transitionToList();
+    this.transitionToPositionsPge();
   }
 });

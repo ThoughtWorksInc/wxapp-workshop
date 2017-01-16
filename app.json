@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/list/list",
-    "pages/position/position",
+    "pages/positions/positions",
+    "pages/operate-position/operate-position",
     "pages/explore/explore",
     "pages/apply/apply",
-    "pages/profile/profile"
+    "pages/me/me"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2DBE60",
@@ -22,7 +22,7 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/positions/positions",
         "text": "职位",
         "iconPath": "icons/home.png",
         "selectedIconPath": "icons/home_green.png"
@@ -40,7 +40,7 @@
         "selectedIconPath": "icons/heart_green.png"
       },
       {
-        "pagePath": "pages/profile/profile",
+        "pagePath": "pages/me/me",
         "text": "我",
         "iconPath": "icons/person.png",
         "selectedIconPath": "icons/person_green.png"

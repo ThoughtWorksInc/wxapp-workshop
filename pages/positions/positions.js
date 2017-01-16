@@ -13,15 +13,15 @@ Page({
     });
   },
 
-  transitionToUpdate(e){
+  transitionToEditPositionPage(e){
     wx.navigateTo({
-      url: `../position/position?id=${e.target.dataset.id}`,
+      url: `../operate-position/operate-position?id=${e.target.dataset.id}`,
     });
   },
 
-  transitionToPosition(){
+  transitionToCreatePositionPage(){
     wx.navigateTo({
-      url: '../position/position'
+      url: '../operate-position/operate-position'
     });
   },
 
