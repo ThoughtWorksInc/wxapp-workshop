@@ -25,10 +25,8 @@ Page({
 
   deleteJobs(e){
     const id = e.target.dataset.id;
-    deleteJob(id).then(jobList => {
-      this.setData({
-        jobList
-      });
-    });
+    app.positionsRef.child(id).remove().then(() => {
+      //TODO something
+    })
   }
 });
