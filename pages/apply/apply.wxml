@@ -1,10 +1,31 @@
 <!--apply.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<form bindsubmit="onSubmit">
+    <view class="section">
+        <input
+                name="name"
+                placeholder="Name"
+        />
+    </view>
+    <view class="section">
+        <input
+                name="github"
+                placeholder="GitHub"
+        />
+    </view>
+    <view class="section">
+        <input
+                name="phone_number"
+                placeholder="Phone"
+        />
+    </view>
+    <view class="section">
+        <textarea
+                name="more_detail"
+                placeholder="Detail"
+                auto-height="true"
+        />
+    </view>
+    <button form-type="submit" class="submit-btn">
+        提交
+    </button>
+</form>

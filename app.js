@@ -16,6 +16,7 @@ App({
     wilddog.initializeApp(config)
 
     this.positionsRef = wilddog.sync().ref('tw_positions')
+    this.applicationsRef = wilddog.sync().ref('tw_applications')
 
     wx.setStorageSync('role', 'bushiHR')
   },
