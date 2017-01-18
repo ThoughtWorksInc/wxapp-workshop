@@ -1,20 +1,25 @@
 <form bindsubmit="onSubmit">
-    <view wx:for="{{fields}}" wx:key="{{index}}">
-        <view class="section">
-            <input
-                    wx:if="{{item.tag==='input'}}"
-                    name="{{item.name}}"
-                    value="{{values[item.name]}}"
-                    placeholder="{{item.placeholder}}"
-            />
-            <textarea
-                    wx:if="{{item.tag==='textarea'}}"
-                    name="{{item.name}}"
-                    value="{{values[item.name]}}"
-                    placeholder="{{item.placeholder}}"
-                    auto-height="true"
-            />
-        </view>
+    <view class="section">
+        <input
+                name="name"
+                value="{{position['.value'].name}}"
+                placeholder="Name"
+        />
+    </view>
+    <view class="section">
+        <input
+                name="address"
+                value="{{position['.value'].address}}"
+                placeholder="Address"
+        />
+    </view>
+    <view class="section">
+        <textarea
+                name="description"
+                value="{{position['.value'].description}}"
+                placeholder="Description"
+                auto-height="true"
+        />
     </view>
     <button form-type="submit" class="submit-btn">提交</button>
 </form>

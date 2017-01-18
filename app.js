@@ -1,3 +1,10 @@
+import wilddog from './utils/wilddog'
+
+var config = {
+  syncURL: 'https://tw-internal-referral.wilddogio.com',
+  authDomain: 'tw-internal-referral.wilddogio.com'
+}
+
 //app.js
 App({
   onLaunch: function () {
@@ -5,6 +12,11 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+
+    wilddog.initializeApp(config)
+
+    this.positionsRef = wilddog.sync().ref('tw_positions')
+
   },
   getUserInfo: function (cb) {
     var that = this
