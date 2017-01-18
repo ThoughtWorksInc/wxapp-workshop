@@ -6,7 +6,6 @@ Page({
     this.setData({
       role
     })
-    app.applicationRef.bindAsArray(this, 'applications');
   },
 
   transitionToUpdate(e){

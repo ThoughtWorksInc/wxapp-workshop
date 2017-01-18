@@ -1,13 +1,13 @@
 <view>
-    <view wx:for="{{positions}}" wx:key="{{index}}" class="job">
+    <view wx:for="{{positions}}" wx:for-item="position" wx:key="{{objectId}}" class="job">
         <view class="left">
-            <view>{{item[".value"].name}}</view>
-            <view>{{item[".value"].address}}</view>
-            <view>{{item[".value"].description}}</view>
+            <view>{{position.name}}</view>
+            <view>{{position.location}}</view>
+            <view>{{position.description}}</view>
         </view>
         <view class="right">
-            <button size="mini" bindtap="transitionToUpdate" data-id="{{item['.key']}}">{{role === 'HR' ? '编辑' : '详情'}}</button>
-            <button wx:if="{{role === 'HR'}}" size="mini" type="warn" data-id="{{item['.key']}}" bindtap="deleteJobs">删除</button>
+            <button size="mini" bindtap="transitionToUpdate" data-id="{{position.objectId}}">{{role === 'HR' ? '编辑' : '详情'}}</button>
+            <button wx:if="{{role === 'HR'}}" size="mini" type="warn" data-id="{{position.objectId}}" bindtap="deleteJobs">删除</button>
         </view>
     </view>
     <button wx:if="{{role === 'HR'}}" class="btn" bindtap="transitionToPosition">创建内推职位</button>

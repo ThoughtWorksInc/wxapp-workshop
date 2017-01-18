@@ -20,7 +20,7 @@ Page({
             wx.navigateBack();
         }
     },
-
+    
     onSubmit: function (e) {
         wx.showToast({
             title: '提交中...',

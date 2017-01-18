@@ -3,32 +3,35 @@
         <view class="section">
             <input
                     name="name"
-                    value="{{position['.value'].name}}"
+                    value="{{position_name}}"
+                    bindinput="updateName"
                     placeholder="职位名称"
             />
         </view>
         <view class="section">
             <input
-                    name="address"
-                    value="{{position['.value'].address}}"
+                    name="location"
+                    value="{{position_location}}"
+                    bindinput="updateLocation"
                     placeholder="所在位置"
             />
         </view>
         <view class="section">
             <textarea
                     name="description"
-                    value="{{position['.value'].description}}"
+                    value="{{position_description}}"
+                    bindinput="updateDescription"
                     placeholder="职位描述"
                     auto-height="true"
             />
         </view>
-        <button form-type="submit" class="submit-btn">提交</button>
+        <button bindtap="addPosition" class="submit-btn">提交</button>
         <button bindtap="transitionToApply" class="submit-btn">申请</button>
     </form>
 </view>
 <view class="detail-box" wx:if="{{role !== 'HR'}}">
     <text class="detail-name">{{position['.value'].name}}</text>
-    <text class="detail-address">{{position['.value'].address}}</text>
+    <text class="detail-location">{{position['.value'].location}}</text>
     <text class="detail-description">{{position['.value'].description}}</text>
     <button bindtap="transitionToApply" class="submit-btn">申请</button>
 </view>

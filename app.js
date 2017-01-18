@@ -1,22 +1,18 @@
-import wilddog from './utils/wilddog-weapp-all'
+const AV = require('./utils/leancloud-storage');
 
-const config = {
-  syncURL: 'https://tw-internal-referral.wilddogio.com',
-  authDomain: 'tw-internal-referral.wilddogio.com'
-};
+AV.init({
+  appId: 'A8Hd5F2XM2UEqYLmourvVJkq-gzGzoHsz',
+  appKey: 'C1rD26ukkgTHVItkrc4rXGeT',
+});
 
 App({
   onLaunch: function () {
-    wilddog.initializeApp(config);
-    this.positionsRef = wilddog.sync().ref('tw_positions');
-    this.candidatesRef = wilddog.sync().ref('tw_candidates');
-    this.applicationRef = wilddog.sync().ref('tw_applications');
-
+    
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    // wx.setStorageSync('role', 'HR')
-    wx.setStorageSync('role', 'USER')
+    wx.setStorageSync('role', 'HR')
+    // wx.setStorageSync('role', 'USER')
   },
   
   getUserInfo: function (cb) {
