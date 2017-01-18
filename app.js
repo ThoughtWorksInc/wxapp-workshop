@@ -17,6 +17,7 @@ App({
 
     this.positionsRef = wilddog.sync().ref('tw_positions')
 
+    wx.setStorageSync('role', 'bushiHR')
   },
   getUserInfo: function (cb) {
     var that = this

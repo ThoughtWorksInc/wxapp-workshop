@@ -2,6 +2,7 @@
     <view class="section">
         <input
                 name="name"
+                disabled="{{role=='HR' ? false : true}}"
                 value="{{position['.value'].name}}"
                 placeholder="Name"
         />
@@ -9,6 +10,7 @@
     <view class="section">
         <input
                 name="address"
+                disabled="{{role=='HR' ? false : true}}"
                 value="{{position['.value'].address}}"
                 placeholder="Address"
         />
@@ -16,10 +18,11 @@
     <view class="section">
         <textarea
                 name="description"
+                disabled="{{role=='HR' ? false : true}}"
                 value="{{position['.value'].description}}"
                 placeholder="Description"
                 auto-height="true"
         />
     </view>
-    <button form-type="submit" class="submit-btn">提交</button>
+    <button wx:if="{{role=='HR'}}" form-type="submit" class="submit-btn">提交</button>
 </form>

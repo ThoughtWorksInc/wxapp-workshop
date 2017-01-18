@@ -9,6 +9,8 @@ Page({
 
   onLoad(){
     app.positionsRef.bindAsArray(this, 'positions')
+
+    this.setData({ role: wx.getStorageSync('role') })
   },
 
   transitionToEditPositionPage(e){

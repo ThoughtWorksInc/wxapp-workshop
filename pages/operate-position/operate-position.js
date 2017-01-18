@@ -14,6 +14,8 @@ Page({
 
     console.log(id)
 
+    this.setData({ role: wx.getStorageSync('role') })
+
     if (id) {
       this.setNavigationBarTitle('编辑内推职位');
       app.positionsRef.child(id).bindAsObject(this, 'position')
