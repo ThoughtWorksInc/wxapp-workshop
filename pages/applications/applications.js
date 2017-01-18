@@ -21,6 +21,13 @@ Page({
     });
   },
 
+  callApplicant(e){
+    var phoneNumber = e.target.dataset.phoneNumber
+    wx.makePhoneCall({
+      phoneNumber
+    })
+  },
+
   deleteApplication(e){
     wx.showToast({
       title: '提交中...',

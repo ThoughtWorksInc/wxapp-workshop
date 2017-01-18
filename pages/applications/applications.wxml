@@ -10,6 +10,7 @@
         <view class="right">
             <button size="mini" bindtap="transitionToUpdate" data-id="{{item['.key']}}">{{role === 'HR' ? '编辑' : '详情'}}</button>
             <button wx:if="{{role === 'HR'}}" size="mini" type="warn" data-id="{{item['.key']}}" bindtap="deleteApplication">删除</button>
+            <button size="mini" data-phone-number="{{item['.value'].name}}" bindtap="callApplicant">Call</button>
         </view>
     </view>
 </view>

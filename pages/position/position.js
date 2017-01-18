@@ -14,6 +14,14 @@ Page({
         })
     },
 
+    onShareAppMessage() {
+      return {
+        title: this.position['.value'].name,
+        desc: this.postion['.value'].description,
+        path: `../position/position?id=${this.data.id}`
+      }
+    },
+
     transitionToList(){
         wx.navigateBack();
     },

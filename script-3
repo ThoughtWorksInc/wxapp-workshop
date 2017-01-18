@@ -1,0 +1,77 @@
+## 需求分析 (5min，可以有一些互动)
+   1. 看什么：要一个页面作为申请列表
+   2. 谁能看：要区分出来用户和HR
+   3. 从哪看：页面要有一个入口，在“我的”
+   4. 能做什么：查看详情，并打电话给候选人
+
+## 添加角色 (5min)
+   1. 添加Role的Storage到App
+   2. 添加到Applications页面的按钮到“我的”，用wx:if控制显示
+   ```
+   <button wx:if="{{role === 'HR'}}" class="btn" bindtap="transitionToApplication">申请列表</button>
+   ```
+
+   ```
+   transitionToApplication(){
+       wx.navigateTo({
+           url: '../applications/applications'
+       });
+   }
+   ```
+
+## 添加申请列表页Applications (15min)
+   1. 创建页面相关文件
+   2. 添加列表绑定到js
+   3. 添加列表渲染到wxml
+
+   ```
+   onLoad() {
+     const role = wx.getStorageSync('role')
+     this.setData({
+       role
+     })
+     app.applicationRef.bindAsArray(this, 'applications');
+   }
+   ```
+
+   ```
+   <view>
+       <view wx:for="{{applications}}" wx:key="{{index}}" class="section">
+           <view class="left">
+               <view>{{item[".value"].name}}</view>
+               <view>{{item[".value"].github}}</view>
+               <view>{{item[".value"].more_detail}}</view>
+               <view>{{item[".value"].userInfo.nickName}}</view>
+               <view>{{item[".value"].userInfo.unionId}}</view>
+           </view>
+           <view class="right">
+               <button size="mini" data-phone-number="{{item['.value'].name}}" bindtap="callApplicant">Call</button>
+           </view>
+       </view>
+   </view>
+   ```
+
+## 添加给申请人打电话功能 (5min)
+   1. 添加phoneNumber字段
+   2. 添加Call按钮
+   3. 绑定事件给按钮
+   ```
+   callApplicant(e){
+     var phoneNumber = e.target.dataset.phoneNumber
+     wx.makePhoneCall({
+       phoneNumber
+     })
+   },
+   ```
+
+## 添加分享功能 (5min)
+   1. 为position页面添加分享
+   ```
+   onShareAppMessage() {
+     return {
+       title: this.position['.value'].name,
+       desc: this.postion['.value'].description,
+       path: `../position/position?id=${this.data.id}`
+     }
+   },
+   ```
