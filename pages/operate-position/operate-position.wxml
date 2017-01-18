@@ -24,5 +24,7 @@
                 auto-height="true"
         />
     </view>
-    <button wx:if="{{role=='HR'}}" form-type="submit" class="submit-btn">提交</button>
+    <button form-type="submit" class="submit-btn">
+        {{ role == 'HR' ? '提交' : '申请'}}
+    </button>
 </form>

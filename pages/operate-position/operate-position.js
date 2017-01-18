@@ -32,6 +32,13 @@ Page({
   onSubmit(e){
     const values = e.detail.value;
     const id = this.data.id;
+
+    if(this.data.role != 'HR') {
+      console.log('go:', id)
+      wx.navigateTo({ url: `../apply/apply?id=${id}` })
+      return;
+    }
+
     let operationPromise = id ? app.positionsRef.child(id).set(values) : app.positionsRef.push(values)
 
     operationPromise.then(() => {

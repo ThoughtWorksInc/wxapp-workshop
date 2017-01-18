@@ -33,12 +33,6 @@
         "selectedIconPath": "icons/compass_green.png"
       },
       {
-        "pagePath": "pages/apply/apply",
-        "text": "申请",
-        "iconPath": "icons/heart.png",
-        "selectedIconPath": "icons/heart_green.png"
-      },
-      {
         "pagePath": "pages/me/me",
         "text": "我",
         "iconPath": "icons/person.png",
